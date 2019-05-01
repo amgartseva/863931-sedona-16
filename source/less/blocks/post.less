@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+.post__wrapper {
+  padding: 20px;
+}
+
 .post__title {
   font-weight: 700;
   font-size: 14px;
@@ -20,4 +24,79 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
+  padding-left: 37px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 21px;
+    left: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .post {
+    width: 324px;
+    padding: 0;
+    margin: 0;
+
+    &--first {
+      flex-grow: 1;
+      width: 648px;
+    }
+  }
+
+  .post__wrapper {
+    padding: 0;
+  }
+
+  .post__content {
+    background-color: @lightest-gray;
+    margin-top: -4px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &--darker {
+      background-color: @odd-photo-gray;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .post {
+    width: 400px;
+
+    &--first {
+      flex-grow: 1;
+      width: 1200px;
+    }
+  }
+
+  .post__wrapper {
+    padding: 0;
+  }
+
+  .post__content {
+    background-color: @main-menu-focus;
+    bottom: 0;
+    width: 400px;
+    margin-top: -80px;
+  }
+
+  .post__title {
+    color: @white;
+  }
+
+  .post__author {
+    color: @white;
+  }
+
+  .post__like {
+    color: @white;
+  }
 }
