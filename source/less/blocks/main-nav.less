@@ -1,44 +1,119 @@
 .main-nav__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav__item {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav__link {
-    text-decoration: none;
-    color: @white;
-    background-color: @lighter-blue;
-    box-shadow: 0px 1px 0 0 rgba(1, 1, 1, 0.2), inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
-    width: 320px;
-    display: inline-block;
+  text-decoration: none;
+  color: @white;
+  background-color: @lighter-blue;
+  box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  width: 320px;
+  display: inline-block;
 
+  &:hover {
+    background-color: @blue;
+  }
+
+  &:focus {
+    background-color: @darker-blue;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--active {
     &:hover {
-        background-color: @blue;
+      background-color: @lighter-blue;
     }
 
     &:focus {
-        background-color: @darker-blue;
-        color: rgba(255, 255, 255, 0.3);
+      background-color: @lighter-blue;
+      color: @white;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: @tablet-width;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 330px;
+  }
+
+  .main-nav__link {
+    background-color: @white;
+    color: @black;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 153px;
+
+    &:hover {
+      background-color: @white;
+      color: @lighter-blue;
+    }
+
+    &:focus {
+      background-color: @white;
+      color: @main-menu-focus;
     }
 
     &--active {
-        &:hover {
-            background-color: @lighter-blue;
-        }
+      color: @active;
 
-        &:focus {
-            background-color: @lighter-blue;
-            color: @white;
-        }
+      &:hover {
+        background-color: @white;
+        color: @active-hover;
+      }
+
+      &:focus {
+        background-color: @white;
+        color: @active-focus;
+      }
     }
+  }
+
+  .main-nav__item {
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 1200px;
+  }
+
+  .main-nav__list {
+    width: 478px;
+  }
+
+  .main-nav__link {
+    width: 240px;
+  }
 }
