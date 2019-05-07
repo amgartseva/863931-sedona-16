@@ -1,6 +1,12 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
+  }
 }
 
 .page-header__image {
@@ -10,7 +16,12 @@
   background-position: 0 0;
 
   &--text {
-    padding: 90px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    width: 281px;
+    height: 214px;
   }
 
   &::after {
@@ -19,49 +30,21 @@
     height: 26px;
     position: absolute;
     background-image: url("../img/bg-intro-triangle-mobile.svg");
-    top: 363px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
   }
 
   &--small-text {
+    width: 229px;
     padding-top: 52px;
-    padding-left: 46px;
     padding-bottom: 67px;
-  }
-}
-
-.page-header__logo {
-  position: relative;
-}
-
-.page-header__logo-image {
-  z-index: 100;
-  position: absolute;
-  left: 110px;
-  top: -25px;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header {
-    width: auto;
-    margin: 0;
+    padding-left: 46px;
+    padding-right: 46px;
   }
 
-  .page-header__logo {
-    position: relative;
-    display: block;
-  }
-
-  .page-header__logo-image {
-    position: absolute;
-    top: -80px;
-    left: 333px;
-  }
-
-  .page-header__image {
-    position: relative;
+  @media (min-width: @tablet-width) {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     &--text {
       width: 460px;
@@ -70,12 +53,9 @@
     }
 
     &::after {
-      content: "";
-      position: absolute;
       width: 768px;
       height: 57px;
       background-image: url("../img/bg-intro-triangle-tablet.svg");
-      top: 461px;
     }
 
     &--small-text {
@@ -84,23 +64,32 @@
       padding: 150px;
     }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .page-header__logo-image {
-    top: -80px;
-    left: 505px;
-  }
-
-  .page-header__image {
+  @media (min-width: @desktop-width) {
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     &--text {
       width: 460px;
       height: 350px;
       padding: 77px 370px;
     }
+
+    &::after {
+      width: 1200px;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+    }
+  }
+}
+
+.page-header__logo {
+  z-index: 100;
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
   }
 }
