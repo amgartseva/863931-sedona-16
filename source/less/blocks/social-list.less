@@ -1,15 +1,21 @@
 .social-list {
-    list-style: none;
-}р
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
 
 .social-list__link {
-    background-color: @lighter-blue;
+  background-color: @lighter-blue;
+  display: block;
+  width: 46px;
+  height: 46px;
 
-    &:hover {
-        background-color: @blue;
-    }
+  &:hover {
+    background-color: @blue;
+  }
 
-    &:focus {
-        background-color: @darker-blue;
-    }
+  &:focus {
+    background-color: @darker-blue;
+  }
 }

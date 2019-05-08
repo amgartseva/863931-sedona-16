@@ -1,7 +1,31 @@
+.credit {
+  display: flex;
+}
+
 .credit__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-right: 11px;
+  padding-top: 5px;
+}
+
+.credit__logo-image {
+  width: 27px;
+  height: 34px;
+
+  path {
+    fill: @black;
+
+    &:hover {
+      fill: @lighter-blue;
+    }
+
+    &:focus {
+      fill: @main-menu-focus;
+    }
+  }
 }

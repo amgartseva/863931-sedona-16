@@ -1,3 +1,38 @@
 body {
-    font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    background-color: @lightest-gray;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.inner {
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    margin: auto;
+    background-color: @white;
+    box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+  }
 }
