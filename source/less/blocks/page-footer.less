@@ -2,7 +2,9 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    justify-content: space-between;
     padding: 35px 60px;
+    align-content: center;
   }
 }
 
@@ -11,17 +13,31 @@
   font-size: 21px;
   line-height: 26px;
   text-align: center;
-  padding-top: 31px;
+  padding-top: 30px;
   margin: 0;
+  
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    margin-right: 28px;
+  }
 }
 
 .page-footer__social-list {
   padding: 40px;
   padding-left: 84px;
+  padding-bottom: 35px;
   margin: 0;
+  
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .page-footer__credit {
   padding-left: 95px;
   padding-bottom: 23px;
+  
+  @media (min-width: @tablet-width) {
+    padding-left: 80px;
+  }
 }

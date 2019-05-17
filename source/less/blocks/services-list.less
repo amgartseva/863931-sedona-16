@@ -14,25 +14,16 @@
   background-color: @white;
   margin: 0;
   padding-left: 70px;
+  padding-right: 40px;
   background-repeat: no-repeat;
   background-position: 0 0;
-
-  &--house {
-    background-image: url("../img/icons/icon-house.svg");
-  }
-
-  &--gift {
-    background-image: url("../img/icons/icon-gift.svg");
-  }
-
-  &--burger {
-    background-image: url("../img/icons/icon-burger.svg");
-  }
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
-    padding-top: 160px;
-    padding-bottom: 65px;
+    padding-right: 0;
+    padding-top: 158px;
+    padding-bottom: 25px;
     background-position: 50% 20px;
     width: 33.3333%;
 
@@ -50,14 +41,79 @@
   }
 }
 
+.services-list__svg {
+  position: absolute;
+
+  g,
+  path {
+    fill: @lighter-blue;
+  }
+
+  &--house {
+    left: 22px;
+    top: 26px;
+    width: 37px;
+    height: 36px;
+
+    @media (min-width: @tablet-width) {
+      width: 75px;
+      height: 72px;
+      left: 90px;
+      top: 60px;
+    }
+  }
+
+  &--gift {
+    left: 25px;
+    top: 18px;
+    width: 32px;
+    height: 38px;
+
+    @media (min-width: @tablet-width) {
+      width: 64px;
+      height: 75px;
+      left: 95px;
+      top: 57px;
+    }
+  }
+
+  &--burger {
+    top: 23px;
+    left: 18px;
+    width: 40px;
+    height: 35px;
+
+    @media (min-width: @tablet-width) {
+      width: 77px;
+      height: 68px;
+      left: 90px;
+      top: 63px;
+    }
+  }
+}
+
 .services-list__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: @black;
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 14px;
+
+  &--gift {
+    padding-top: 30px;
+  }
+
+  &--burger {
+    padding-top: 30px;
+  }
 
   @media (min-width: @tablet-width) {
     text-align: center;
+    font-size: 21px;
+    padding-top: 0;
+    padding-bottom: 22px;
   }
 }
 
@@ -66,10 +122,18 @@
   font-size: 14px;
   line-height: 21px;
   color: @darkest-gray;
+  margin: 0;
+  pading: 0;
+
 
   @media (min-width: @tablet-width) {
     text-align: center;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 46px;
+    padding-right: 46px;
+
+    &--burger {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 }

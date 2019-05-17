@@ -1,10 +1,16 @@
 .post {
   margin: 0;
+  border-bottom: 1px @gray solid;
+
+  &--first {
+    border-top: 1px @gray solid;
+  }
 
   @media (min-width: @tablet-width) {
     width: 324px;
     padding: 0;
     margin: 0;
+    border: none;
 
     &--first {
       flex-grow: 1;
@@ -32,7 +38,6 @@
 .post__content {
   @media (min-width: @tablet-width) {
     background-color: @lightest-gray;
-    margin-top: -4px;
     padding-left: 20px;
     display: flex;
     justify-content: space-between;
@@ -100,4 +105,9 @@
 
 .post__photo {
   display: block;
+  line-height: 0;
+
+  & img {
+    object-fit: cover;
+  }
 }
