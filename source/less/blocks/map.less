@@ -1,0 +1,26 @@
+.map {
+  position: relative;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: 350px;
+  
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+  
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
+}
+
+.map__interactive {
+  position: absolute;
+  width: 100%;
+  min-height: 350px;
+}
+
+.map__background {
+  width: 100%;
+}

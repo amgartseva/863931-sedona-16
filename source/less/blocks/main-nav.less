@@ -1,4 +1,4 @@
-.main-nav {
+.main-nav__wrapper {
   @media (min-width: @tablet-width) {
     margin: 0;
     display: flex;
@@ -26,6 +26,11 @@
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 
 .main-nav__link {
@@ -35,6 +40,9 @@
   box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
   display: block;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
 
   &:hover {
     background-color: @blue;
@@ -62,8 +70,10 @@
     box-shadow: none;
     padding: 0;
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    width: 153px;
 
     &:hover {
       background-color: @white;
@@ -89,9 +99,65 @@
       }
     }
   }
+  
+  @media (min-width: @desktop-width) {
+    width: 239px;
+  }
 }
 
-.main-nav__toggle {
+.main-nav--no-js {
+  
+}
+
+.main-nav--closed .main-nav__toggle {
+  position: absolute;
+  z-index: 5;
+  width: 23px;
+  height: 22px;
+  background-image: url("../img/icons/icon-menu.svg");
+  background-color: transparent;
+  border: none;
+  right: 20px;
+  top: 17px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  z-index: 5;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icons/icon-cross.svg");
+  background-color: transparent;
+  border: none;
+  right: 20px;
+  top: 17px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+  
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  display: block;
+}
+
+.main-nav--closed .main-nav__toggle-wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
     display: none;
   }

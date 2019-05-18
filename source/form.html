@@ -4,34 +4,46 @@
 <head>
   <meta charset="utf-8">
   <title>Седона: оставьте свой отзыв</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="inner">
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">Закрыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="photo.html">Фото и видео</a>
-          </li>
-        </ul>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
-          </li>
-        </ul>
+      <nav class="main-nav main-nav--opened">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list main-nav__list--left">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--right">
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--active" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-nav__toggle-wrapper">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+        </div>
       </nav>
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="../img/logo-sedona-mobile.svg" alt="Город Седона">
-      </a>
+      <div class="page-header__menu">
+        <a class="page-header__logo" href="index.html">
+          <picture class="page-header__logo-image">
+            <source srcset="../img/logo-sedona-desktop.svg" media="(min-width: 1280px)" />
+            <source srcset="../img/logo-sedona-tablet.svg" media="(min-width: 768px)" />
+            <img src="../img/logo-sedona-mobile.svg" alt="Город Седона">
+          </picture>
+        </a>
+      </div>
       <div class="page-header__image page-header__image--small">
         <div class="container">
           <img class="page-header__image--small-text" src="../img/text-sedona.svg" alt="Седона">
@@ -45,69 +57,91 @@
         <p class="page-main__intro">Помогите нашим отелям стать лучше! Оставьте свой отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
       <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="form__group">
-          <div class="container">
-            <div class="form__wrapper">
-              <legend class="form__legend">Представьтесь:</legend>
+        <fieldset class="form__group form__group--name">
+          <div class="form__wrapper">
+            <legend class="form__legend">Представьтесь:</legend>
+            <div class="form__item">
               <label class="form__text" for="firstname">Имя*:</label>
-              <input class="form__input" id="firstname" type="text" name="firstname" placeholder="Петр" required><br>
+              <input class="form__input" id="firstname" type="text" name="firstname" placeholder="Петр" required>
+            </div>
+            <div class="form__item">
               <label class="form__text" for="lastname">Фамилия*:</label>
-              <input class="form__input" id="lastname" type="text" name="lastname" placeholder="Иванов" required><br>
+              <input class="form__input" id="lastname" type="text" name="lastname" placeholder="Иванов" required>
+            </div>
+            <div class="form__item">
               <label class="form__text" for="patronymic">Отчество:</label>
               <input class="form__input" id="patronymic" type="text" name="patronymic" placeholder="Александрович">
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__group">
-          <div class="container">
-            <div class="form__wrapper">
-              <legend class="form__legend">Контактная информация:</legend>
-              <label class="form__text" for="phone">Контактный телефон*:</label>
-              <input class="form__input form__input--phone" id="phone" type="tel" name="phone" placeholder="Введите телефон" required><br>
-              <label class="form__text" for="email">Электронная почта*:</label>
-              <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="Введите e-mail" required>
+        <fieldset class="form__group form__group--contacts">
+          <div class="form__wrapper">
+            <legend class="form__legend">Контактная информация:</legend>
+            <div class="form__contacts-flex">
+              <div class="form__item form__item--wrap form__item--no-wrap">
+                <label class="form__text" for="phone"><span class="form__text--hidden">Контактный</span> телефон*:</label>
+                <input class="form__input form__input--phone" id="phone" type="tel" name="phone" placeholder="Введите телефон" pattern="[0-9]{11}" required>
+              </div>
+              <div class="form__item form__item--wrap form__item--no-wrap">
+                <label class="form__text" for="email">Электронная почта*:</label>
+                <input class="form__input form__input--email" id="email" type="email" name="email" placeholder="Введите e-mail" required>
+              </div>
             </div>
-          </div>
         </fieldset>
-        <fieldset class="form__group">
-          <div class="container">
-            <div class="form__wrapper">
-              <legend class="form__legend">Ваше общее впечатление:</legend>
+        <fieldset class="form__group form__group--impression">
+          <div class="form__wrapper">
+            <legend class="form__legend">Ваше общее впечатление:</legend>
+            <div class="form__item">
               <input class="form__radio" id="good" type="radio" name="impression" value="good-impression" checked>
-              <label class="form__bold-text" for="good">Скорее положительное</label><br>
+              <label class="form__bold-text" for="good">Скорее положительное</label>
+            </div>
+            <div class="form__item">
               <input class="form__radio" id="bad" type="radio" name="impression" value="bad-impression">
-              <label class="form__bold-text" for="bad">Скорее отрицательное</label><br>
+              <label class="form__bold-text" for="bad">Скорее отрицательное</label>
+            </div>
+            <div class="form__item">
               <input class="form__radio" id="hard" type="radio" name="impression" value="hard-to-answer">
               <label class="form__bold-text" for="hard">Затрудняюсь ответить</label>
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__group">
-          <div class="container">
-            <div class="form__wrapper">
-              <legend class="form__legend">Посещенные достопримечательности:</legend>
-              <input class="form__checkbox" id="devil-bridge" type="checkbox" name="attraction1" value="devil-bridge" checked>
-              <label class="form__bold-text" for="devil-bridge">Мост Дьявола</label><br>
-              <input class="form__checkbox" id="bell-mountain" type="checkbox" name="attraction2" value="bell-mountain" checked>
-              <label class="form__bold-text" for="bell-mountain">Гора-Колокол</label><br>
-              <input class="form__checkbox" id="slide-park" type="checkbox" name="attraction3" value="slide-park" checked>
-              <label class="form__bold-text" for="slide-park">Слайд-парк</label><br>
-              <input class="form__checkbox" id="red-rocks" type="checkbox" name="attraction4" value="red-rocks">
-              <label class="form__bold-text" for="red-rocks">Красные скалы</label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="form__group">
-          <div class="container">
-            <div class="form__wrapper">
-              <legend class="form__legend">Опишите свои эмоции:</legend>
-              <textarea class="form__input form__input--textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
-            </div>
-          </div>
-        </fieldset>
-        <div class="container">
+        <fieldset class="form__group form__group--attractions">
           <div class="form__wrapper">
+            <legend class="form__legend">Посещенные достопримечательности:</legend>
+            <div class="form__attractions-flex">
+              <div class="form__attractions-flex-first">
+                <div class="form__item">
+                  <input class="form__checkbox" id="devil-bridge" type="checkbox" name="attraction1" value="devil-bridge" checked>
+                  <label class="form__bold-text" for="devil-bridge">Мост Дьявола</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__checkbox" id="bell-mountain" type="checkbox" name="attraction2" value="bell-mountain" checked>
+                  <label class="form__bold-text" for="bell-mountain">Гора-Колокол</label>
+                </div>
+              </div>
+              <div class="form__attractions-flex-second">
+                <div class="form__item">
+                  <input class="form__checkbox" id="slide-park" type="checkbox" name="attraction3" value="slide-park" checked>
+                  <label class="form__bold-text" for="slide-park">Слайд-парк</label>
+                </div>
+                <div class="form__item">
+                  <input class="form__checkbox" id="red-rocks" type="checkbox" name="attraction4" value="red-rocks">
+                  <label class="form__bold-text" for="red-rocks">Красные скалы</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__group form__group--emotions">
+          <div class="form__wrapper">
+            <legend class="form__legend">Опишите свои эмоции:</legend>
+            <textarea class="form__input form__input--textarea" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+          </div>
+        </fieldset>
+        <div class="form__bottom">
+          <div class="form__wrapper form__wrapper--button-flex">
             <input class="form__button button" type="submit" value="Отправить отзыв">
+            <p class="form__required">* &mdash; обязательные поля</p>
           </div>
         </div>
       </form>
@@ -116,9 +150,31 @@
       <footer class="page-footer">
         <h2 class="page-footer__hashtag">#VISITSEDONA</h2>
         <ul class="page-footer__social-list social-list">
-          <li class="social-list__item"><a class="social-list__link" href="https://twitter.com/">Twitter</a></li>
-          <li class="social-list__item"><a class="social-list__link" href="https://www.facebook.com/">Facebook</a></li>
-          <li class="social-list__item"><a class="social-list__link" href="https://www.youtube.com/">YouTube</a></li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://twitter.com/">
+              <svg class="social-list__icon social-list__icon--twitter" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                <g id="W6EeEF_1_">
+                  <g>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.facebook.com/">
+              <svg class="social-list__icon social-list__icon--facebook" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link --youtube" href="https://www.youtube.com/">
+              <svg class="social-list__icon social-list__icon--youtube" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
+              </svg>
+            </a>
+          </li>
         </ul>
         <div class="page-footer__credit credit">
           <p class="credit__text">Разработано</p>

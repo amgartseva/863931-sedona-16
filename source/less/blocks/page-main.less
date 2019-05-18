@@ -11,11 +11,19 @@
   background-color: @white;
   padding-left: 32px;
   padding-right: 33px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 50px;
+    padding-top: 37px;
     padding-left: 150px;
     padding-right: 150px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 355px;
+    padding-right: 355px;
   }
 }
 
@@ -28,15 +36,34 @@
   background-color: @white;
   padding-left: 32px;
   padding-right: 33px;
+  padding-bottom: 15px;
+
+  &--arrow {
+    position: relative;
+    
+    &::after {
+      content: "";
+      width: 320px;
+      height: 37px;
+      position: absolute;
+      background-image: url("../img/bg-triangle.svg");
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -29px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 55px;
     padding-left: 135px;
     padding-right: 135px;
+    padding-bottom: 38px;
   }
 }
 
 .page-main__photo-wrapper {
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     padding-left: 60px;
     padding-right: 60px;
@@ -57,4 +84,8 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.page-main__advantages--gray {
+  background-color: @lighter-gray;
 }
