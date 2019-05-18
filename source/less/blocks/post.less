@@ -36,6 +36,9 @@
 }
 
 .post__content {
+  width: 280px;
+  margin: auto;
+  
   @media (min-width: @tablet-width) {
     background-color: @lightest-gray;
     padding-left: 20px;
@@ -100,12 +103,13 @@
 }
 
 .post__link {
-  display: block;
+  display: flex;
 }
 
 .post__photo {
   display: block;
   line-height: 0;
+  margin: auto;
 
   & img {
     object-fit: cover;

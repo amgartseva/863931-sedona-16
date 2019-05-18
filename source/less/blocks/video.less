@@ -1,5 +1,6 @@
 .video {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .video__header {
@@ -37,6 +38,10 @@
   padding-right: 20px;
   box-sizing: border-box;
 
+  &--gray {
+    background-color: @lightest-gray;
+  }
+
   @media (min-width: @tablet-width) {
     bottom: 0;
     background-color: @main-menu-focus;
@@ -50,10 +55,9 @@
 .video__length {
   height: 45px;
   width: 100%;
-  background-color: @black;
-  opacity: 0.6;
+  background-color: @black-opacity-06;
   position: relative;
-  
+
   &::before {
     position: absolute;
     content: "";
@@ -64,7 +68,7 @@
     top: 22px;
     left: 22px;
   }
-  
+
   &::after {
     position: absolute;
     content: "";
@@ -86,6 +90,21 @@
   background-color: transparent;
   padding-top: 23px;
   padding-bottom: 23px;
+
+  &--replay {
+    padding-left: 25px;
+    padding-right: 0;
+  }
+
+  &--subtitles {
+    padding-left: 133px;
+    padding-right: 0;
+  }
+  
+  &--full {
+      padding-left: 31px;
+    padding-right: 0;
+    }
 
   @media (min-width: @tablet-width) {
     &--replay {

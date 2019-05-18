@@ -99,6 +99,14 @@
       }
     }
   }
+  
+  @media (min-width: @desktop-width) {
+    width: 239px;
+  }
+}
+
+.main-nav--no-js {
+  
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -133,6 +141,18 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+  
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  display: block;
 }
 
 .main-nav--closed .main-nav__toggle-wrapper {
