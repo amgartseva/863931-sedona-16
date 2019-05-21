@@ -99,14 +99,22 @@
       }
     }
   }
-  
+
   @media (min-width: @desktop-width) {
     width: 239px;
   }
 }
 
 .main-nav--no-js {
-  
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav--no-js .main-nav__toggle {
+  display: none;
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -145,9 +153,9 @@
 
 .main-nav--closed .main-nav__wrapper {
   display: none;
-  
+
   @media (min-width: @tablet-width) {
-    display: block;
+    display: flex;
   }
 }
 
