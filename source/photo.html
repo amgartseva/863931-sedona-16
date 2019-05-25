@@ -6,7 +6,11 @@
   <title>Седона: фото и видео</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="style.min.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="picturefill.js" async></script>
 </head>
 
 <body>
@@ -38,7 +42,7 @@
       <div class="page-header__menu">
         <a class="page-header__logo" href="index.html">
           <picture class="page-header__logo-image">
-            <source srcset="../img/logo-sedona-desktop.svg" media="(min-width: 1280px)" />
+            <source srcset="../img/logo-sedona-desktop.svg" media="(min-width: 1200px)" />
             <source srcset="../img/logo-sedona-tablet.svg" media="(min-width: 768px)" />
             <img src="../img/logo-sedona-mobile.svg" alt="Город Седона">
           </picture>
@@ -61,7 +65,7 @@
           <div class="post__wrapper">
             <a class="post__link" href="#">
               <picture class="post__photo">
-                <source srcset="../img/photo/photo-sunset-desktop@1x.jpg 1x, ../img/photo/photo-sunset-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                <source srcset="../img/photo/photo-sunset-desktop@1x.jpg 1x, ../img/photo/photo-sunset-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                 <source srcset="../img/photo/photo-sunset-tablet@1x.jpg 1x, ../img/photo/photo-sunset-tablet@2x.jpg 2x" media="(min-width: 768px)" />
                 <img src="../img/photo/photo-sunset-mobile@1x.jpg" srcset="../img/photo/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
               </picture>
@@ -90,7 +94,7 @@
           <div class="post__wrapper">
             <a class="post__link" href="#">
               <picture class="post__photo">
-                <source srcset="../img/photo/photo-cactus-desktop@1x.jpg 1x, ../img/photo/photo-cactus-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                <source srcset="../img/photo/photo-cactus-desktop@1x.jpg 1x, ../img/photo/photo-cactus-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                 <source srcset="../img/photo/photo-cactus-tablet@1x.jpg 1x, ../img/photo/photo-cactus-tablet@2x.jpg 2x" media="(min-width: 768px)" />
                 <img src="../img/photo/photo-cactus-mobile@1x.jpg" srcset="../img/photo/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
               </picture>
@@ -119,7 +123,7 @@
           <div class="post__wrapper">
             <a class="post__link" href="#">
               <picture class="post__photo">
-                <source srcset="../img/photo/photo-roads-desktop@1x.jpg 1x, ../img/photo/photo-roads-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                <source srcset="../img/photo/photo-roads-desktop@1x.jpg 1x, ../img/photo/photo-roads-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                 <source srcset="../img/photo/photo-roads-tablet@1x.jpg 1x, ../img/photo/photo-roads-tablet@2x.jpg 2x" media="(min-width: 768px)" />
                 <img src="../img/photo/photo-roads-mobile@1x.jpg" srcset="../img/photo/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
               </picture>
@@ -148,7 +152,7 @@
           <div class="post__wrapper">
             <a class="post__link" href="#">
               <picture class="post__photo">
-                <source srcset="../img/photo/photo-bridge-desktop@1x.jpg 1x, ../img/photo/photo-bridge-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                <source srcset="../img/photo/photo-bridge-desktop@1x.jpg 1x, ../img/photo/photo-bridge-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                 <source srcset="../img/photo/photo-bridge-tablet@1x.jpg 1x, ../img/photo/photo-bridge-tablet@2x.jpg 2x" media="(min-width: 768px)" />
                 <img src="../img/photo/photo-bridge-mobile@1x.jpg" srcset="../img/photo/photo-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
               </picture>
@@ -179,7 +183,7 @@
           <h2 class="video__header">Все еще сомневаетесь?</h2>
           <p class="video__info">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <picture>
-            <source srcset="../img/video-desktop@1x.jpg 1x, ../img/video-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+            <source srcset="../img/video-desktop@1x.jpg 1x, ../img/video-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
             <source srcset="../img/video-tablet@1x.jpg 1x, ../img/video-tablet@2x.jpg 2x" media="(min-width: 768px)" />
             <img class="video__content" src="../img/video-mobile@1x.jpg" srcset="../img/video-mobile@2x.jpg 2x" alt="Превью видео">
           </picture>
@@ -216,7 +220,7 @@
         <ul class="page-footer__social-list social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="https://twitter.com/">
-              <svg class="social-list__icon social-list__icon--twitter" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+              <svg class="social-list__icon social-list__icon--twitter" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
                 <g id="W6EeEF_1_">
                   <g>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
@@ -233,7 +237,7 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link --youtube" href="https://www.youtube.com/">
+            <a class="social-list__link" href="https://www.youtube.com/">
               <svg class="social-list__icon social-list__icon--youtube" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
               </svg>
@@ -250,7 +254,7 @@
       </footer>
     </div>
   </div>
-  <script src="../js/script.js"></script>
+  <script src="script.min.js"></script>
 </body>
 
 </html>
