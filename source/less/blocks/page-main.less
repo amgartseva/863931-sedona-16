@@ -19,13 +19,19 @@
     padding-bottom: 10px;
   }
 
+  &--form {
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 37px;
     padding-left: 150px;
     padding-right: 150px;
     font-size: 21px;
 
-    &--photo {
+    &--photo,
+    &--form {
       font-size: 30px;
       padding-top: 55px;
     }
@@ -35,7 +41,8 @@
     padding-left: 355px;
     padding-right: 355px;
 
-    &--photo {
+    &--photo,
+    &--form {
       padding-top: 93px;
     }
   }
@@ -44,7 +51,7 @@
 .page-main__intro {
   font-weight: 400;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 24px;
   text-align: center;
   color: @darkest-gray;
   background-color: @white;
@@ -56,6 +63,12 @@
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 10px;
+  }
+
+  &--form {
+    padding-left: 23px;
+    padding-right: 21px;
+    padding-bottom: 3px;
   }
 
   &--arrow {
@@ -83,6 +96,11 @@
       padding-right: 170px;
       padding-bottom: 52px;
     }
+
+    &--form {
+      padding-left: 164px;
+      padding-right: 165px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -90,6 +108,12 @@
       padding-left: 385px;
       padding-right: 387px;
       padding-bottom: 54px;
+    }
+
+    &--form {
+      padding-left: 380px;
+      padding-right: 380px;
+      padding-bottom: 24px;
     }
   }
 }
