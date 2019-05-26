@@ -101,6 +101,12 @@
       padding-left: 164px;
       padding-right: 165px;
     }
+
+    &--arrow {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -120,6 +126,7 @@
 
 .page-main__photo-wrapper {
   margin: 0 auto;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;

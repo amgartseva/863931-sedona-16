@@ -7,6 +7,7 @@
     @media (min-width: @tablet-width) {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
 }
@@ -29,8 +30,8 @@
 }
 
 .advantages-list__content {
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
@@ -68,6 +69,8 @@
 
   &--first {
     padding-top: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   @media (min-width: @tablet-width) {
@@ -138,6 +141,16 @@
     padding-bottom: 30px;
   }
 
+  &--fourth {
+    padding-left: 29px;
+    padding-right: 30px;
+  }
+
+  &--fifth {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   @media (min-width: @tablet-width) {
     padding-left: 45px;
     padding-right: 45px;
@@ -159,9 +172,8 @@
     padding-right: 67px;
 
     &--devil {
-      padding-left: 93px;
-      padding-right: 93px;
-      width: 215px;
+      padding-left: 90px;
+      padding-right: 90px;
     }
 
     &--gray {
@@ -181,10 +193,6 @@
   margin: 0;
   padding: 0;
 
-  &--img {
-    display: block;
-  }
-
   @media (min-width: @tablet-width) {
     flex-grow: 1;
     width: 66.6666%;
@@ -193,13 +201,19 @@
   @media (min-width: @desktop-width) {
     overflow: hidden;
     height: 256px;
+  }
+}
 
-    &--img {
-      object-position: 0 -70px;
-    }
+.advantages-list__photo-img {
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    object-position: 0 -70px;
+    font-family: "object-position: 0 -70px;";
 
     &--devil {
       object-position: 0 -75px;
+      font-family: "object-position: 0 -75px;";
     }
   }
 }

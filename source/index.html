@@ -6,7 +6,11 @@
   <title>Седона</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="../css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.js" async></script>
 </head>
 
 <body>
@@ -38,7 +42,7 @@
       <div class="page-header__menu">
         <a class="page-header__logo">
           <picture class="page-header__logo-image">
-            <source srcset="../img/logo-sedona-desktop.svg" media="(min-width: 1280px)" />
+            <source srcset="../img/logo-sedona-desktop.svg" media="(min-width: 1200px)" />
             <source srcset="../img/logo-sedona-tablet.svg" media="(min-width: 768px)" />
             <img src="../img/logo-sedona-mobile.svg" alt="Город Седона">
           </picture>
@@ -46,7 +50,7 @@
       </div>
       <div class="page-header__image">
         <div class="container">
-          <img class="page-header__image--text" src="../img/text-sedona-index.svg" alt="Седона">
+          <img class="page-header__image-text" src="../img/text-sedona-index.svg" alt="Седона">
         </div>
       </div>
     </header>
@@ -68,9 +72,9 @@
                 </div>
                 <div class="advantages-list__photo">
                   <picture>
-                    <source srcset="../img/photo/main-city-desktop@1x.jpg 1x, ../img/photo/main-city-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                    <source srcset="../img/photo/main-city-desktop@1x.jpg 1x, ../img/photo/main-city-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                     <source srcset="../img/photo/main-city-tablet@1x.jpg 1x, ../img/photo/main-city-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                    <img class="advantages-list__photo--img" src="../img/photo/main-city-mobile@1x.jpg" srcset="../img/photo/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
+                    <img class="advantages-list__photo-img" src="../img/photo/main-city-mobile@1x.jpg" srcset="../img/photo/main-city-mobile@2x.jpg 2x" alt="Настоящий городок">
                   </picture>
                 </div>
               </div>
@@ -132,16 +136,16 @@
                 </div>
                 <div class="advantages-list__photo">
                   <picture>
-                    <source srcset="../img/photo/main-bridge-desktop@1x.jpg 1x, ../img/photo/main-bridge-desktop@2x.jpg 2x" media="(min-width: 1280px)" />
+                    <source srcset="../img/photo/main-bridge-desktop@1x.jpg 1x, ../img/photo/main-bridge-desktop@2x.jpg 2x" media="(min-width: 1200px)" />
                     <source srcset="../img/photo/main-bridge-tablet@1x.jpg 1x, ../img/photo/main-bridge-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                    <img class="advantages-list__photo--img advantages-list__photo--devil" src="../img/photo/main-bridge-mobile@1x.jpg" srcset="../img/photo/main-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
+                    <img class="advantages-list__photo-img advantages-list__photo-img--devil" src="../img/photo/main-bridge-mobile@1x.jpg" srcset="../img/photo/main-bridge-mobile@2x.jpg 2x" alt="Мост дьявола">
                   </picture>
                 </div>
               </div>
             </div>
           </li>
         </ol>
-        <div class="page-main__advantages--gray">
+        <div class="page-main__advantages page-main__advantages--gray">
           <div class="container">
             <ol class="advantages-list advantages-list--row">
               <li class="advantages-list__item">
@@ -162,7 +166,7 @@
                 <div class="advantages-list__content">
                   <h2 class="advantages-list__title advantages-list__title--gray">Мало туристов</h2>
                   <p class="advantages-list__number">&mdash; №5 &mdash;</p>
-                  <p class="advantages-list__info advantages-list__info--gray">Большинство едет в Гранд Каньон и толпится там</p>
+                  <p class="advantages-list__info advantages-list__info--gray advantages-list__info--fifth">Большинство едет в Гранд Каньон и толпится там</p>
                 </div>
               </li>
             </ol>
@@ -205,7 +209,7 @@
             </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link --youtube" href="https://www.youtube.com/">
+            <a class="social-list__link" href="https://www.youtube.com/">
               <svg class="social-list__icon social-list__icon--youtube" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
                 <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
               </svg>
@@ -222,7 +226,10 @@
       </footer>
     </div>
   </div>
-  <script src="../js/script.js"></script>
+  <script src="../js/script.min.js"></script>
+  <script>
+    objectFitImages();
+  </script>
 </body>
 
 </html>
