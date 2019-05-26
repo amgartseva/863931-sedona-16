@@ -73,8 +73,10 @@ inlineSvg: true
 gulp.task("js", function () {
 return gulp.src("source/js/*.js")
 .pipe(sourcemaps.init())
+.pipe(concat("script.js"))
+.pipe(gulp.dest("build/js"))
 .pipe(uglify())
-.pipe(concat("script.min.js"))
+.pipe(rename("script.min.js"))
 .pipe(sourcemaps.write())
 .pipe(gulp.dest("build/js"));
 });
@@ -91,6 +93,7 @@ browsers: ["last 2 versions", "ie 11", "Firefox > 20"]
 }),
 require("postcss-object-fit-images")
 ]))
+.pipe(gulp.dest("build/css"))
 .pipe(cleanCSS())
 .pipe(rename("style.min.css"))
 .pipe(sourcemaps.write(""))
